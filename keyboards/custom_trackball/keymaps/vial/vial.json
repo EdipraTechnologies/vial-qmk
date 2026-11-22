@@ -1,0 +1,24 @@
+{
+  "name": "DIY PMW3360 Trackball (prototype)",
+  "vendorId": "0xFEED",
+  "productId": "0x3360",
+  "lighting": {
+    "extends": "qmk_rgblight"
+  },
+  "matrix": {
+    "rows": 1,
+    "cols": 6
+  },
+  "layouts": {
+    "keymap": [
+      [
+        "0,0",
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ]
+    ]
+  }
+}

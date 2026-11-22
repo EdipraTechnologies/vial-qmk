@@ -1,0 +1,101 @@
+{
+  "manufacturer": "DIY",
+  "keyboard_name": "Custom PMW3360 Trackball",
+  "maintainer": "itstoxsec",
+  "processor": "RP2040",
+  "bootloader": "rp2040",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x3360",
+    "device_version": "1.0.0"
+  },
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+    "direct": [
+      [
+        "GP1",
+        "GP2",
+        "GP29",
+        "GP27",
+        "GP4",
+        "GP6"
+      ]
+    ]
+  },
+  "encoder": {
+    "rotary": [
+      {
+        "pin_a": "GP28",
+        "pin_b": "GP3",
+        "resolution": 4
+      }
+    ]
+  },
+  "rgblight": {
+    "led_count": 2,
+    "pin": "GP26",
+    "animations": {
+      "breathing": true
+    }
+  },
+  "layouts": {
+    "LAYOUT": {
+      "layout": [
+        {
+          "matrix": [
+            0,
+            0
+          ],
+          "x": 0,
+          "y": 0,
+          "label": "C1"
+        },
+        {
+          "matrix": [
+            0,
+            1
+          ],
+          "x": 1,
+          "y": 0,
+          "label": "C2"
+        },
+        {
+          "matrix": [
+            0,
+            2
+          ],
+          "x": 2,
+          "y": 0,
+          "label": "R1"
+        },
+        {
+          "matrix": [
+            0,
+            3
+          ],
+          "x": 3,
+          "y": 0,
+          "label": "R2"
+        },
+        {
+          "matrix": [
+            0,
+            4
+          ],
+          "x": 4,
+          "y": 0,
+          "label": "R3"
+        },
+        {
+          "matrix": [
+            0,
+            5
+          ],
+          "x": 5,
+          "y": 0,
+          "label": "R4"
+        }
+      ]
+    }
+  }
+}
