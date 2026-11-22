@@ -116,8 +116,8 @@ static void tb_load_srom(void) {
 }
 #endif
 
-bool pointing_device_driver_init(void) {
-    if (!tb_pio_init()) return false;
+void pointing_device_driver_init(void) {
+    if (!tb_pio_init()) return;
     tb_start(); wait_us(40); tb_end(); wait_us(40);
     tb_write(0x3a, 0x5a); // Power-Up Reset
     wait_ms(50);
@@ -126,12 +126,12 @@ bool pointing_device_driver_init(void) {
     uint8_t pid = tb_read(0x00);
     uint8_t inv = tb_read(0x3f);
     uprintf("PMW3360: Product ID=0x%02X Inverse=0x%02X\n", pid, inv);
-    if (pid != 0x42 || inv != 0xbd) return false;
+    if (pid != 0x42 || inv != 0xbd) return;
 #ifdef TRACKBALL_LOAD_SROM
     tb_load_srom();
     uint8_t srom_id = tb_read(0x2a);
     uprintf("PMW3360: SROM ID=0x%02X\n", srom_id);
-    if (srom_id == 0x00 || srom_id == 0xFF) return false;
+    if (srom_id == 0x00 || srom_id == 0xFF) return;
 #else
     uprintf("PMW3360: no SROM supplied; tracking may not function reliably\n");
 #endif
@@ -140,7 +140,7 @@ bool pointing_device_driver_init(void) {
     tb_write(0x63, 0x02); // Lift config
     tb_burst_primed = false;
     tb_sensor_ok = true;
-    return true;
+    return;
 }
 
 report_mouse_t pointing_device_driver_get_report(report_mouse_t report) {
