@@ -8,6 +8,7 @@
 #define TRACKBALL_PIN_MOTION 9
 #define TRACKBALL_DEFAULT_CPI 1600
 #define WS2812_DI_PIN GP26
+#define RGBLIGHT_LED_COUNT 2
 #define RGBLIGHT_LIMIT_VAL 80
 #define RGBLIGHT_DEFAULT_VAL 48
 // Optional: uncomment after creating pmw3360_srom.h from your LEGALLY obtained SROM.
