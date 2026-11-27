@@ -11,16 +11,8 @@
   },
   "diode_direction": "COL2ROW",
   "matrix_pins": {
-    "direct": [
-      [
-        "GP1",
-        "GP2",
-        "GP29",
-        "GP27",
-        "GP4",
-        "GP6"
-      ]
-    ]
+      "rows": ["GP29", "GP27", "GP4", "GP6"],
+      "cols": ["GP0", "GP2"]
   },
   "encoder": {
     "rotary": [
